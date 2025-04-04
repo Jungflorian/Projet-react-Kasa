@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Layout from "./Pages/Layout";
+import Apropos from "./Pages/Apropos";
+import Acceuil from "./Pages/Acceuil";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div>
-      <p>Salut</p>
-    </div>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Acceuil />} />
+        <Route path="Apropos" element={<Apropos />} />
+      </Route>
+    </Routes>
+  );
+};
 
-export default App
+export default App;
