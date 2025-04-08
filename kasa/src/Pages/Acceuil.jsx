@@ -1,10 +1,15 @@
+import Header from "../Composants/Header"; 
+import Footer from "../Composants/Footer";
+import "../assets/SASS/Acceuil.scss";
 function Acceuil() {
   return (
-    <div>
-        <div className="accueil_text">
-            <h1>Chez vous, partout et ailleurs</h1>
+    <div className="acceuil">
+      <Header />
+      <Footer />
+      <main>
+      </main>
     </div>
-    </div>
-    )
+  );
 }
-export default Acceuil
+
+export default Acceuil;

@@ -1,0 +1,20 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+nav a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+nav{
+    display: flex;
+    gap: 57px;
+}
+nav a:hover{
+    transition: 0.3s;
+    border-bottom: black solid 1px;
+}
