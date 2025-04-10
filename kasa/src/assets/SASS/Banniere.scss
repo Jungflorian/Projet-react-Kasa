@@ -1,0 +1,21 @@
+.banniere{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banniere__image{
+    width: 80%;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    filter: brightness(0.4);
+}
+
+.banniere h1 {
+    position: absolute;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+

@@ -7,6 +7,8 @@ Footer {
     justify-content: center;
     height: 209px;
     gap: 20px;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer-logo {
@@ -15,5 +17,5 @@ Footer {
 
 footer p {
     color: white;
-    font-family: 'Montserrat', sans-serif; // Appliquer la police Montserrat
+    font-family: 'Montserrat', sans-serif;
   }
