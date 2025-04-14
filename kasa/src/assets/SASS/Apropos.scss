@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+.accueil{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+main{
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
