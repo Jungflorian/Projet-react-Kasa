@@ -12,10 +12,12 @@ nav a{
     color: black;
     font-weight: bold;
 }
+
 nav{
     display: flex;
     gap: 57px;
 }
+
 nav a:hover{
     transition: 0.3s;
     border-bottom: black solid 1px;

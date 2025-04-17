@@ -3,18 +3,5 @@
     height: 223px;
     object-fit: cover;
     border-radius: 25px;
-}
-
-.banniere2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main{
-    padding-left: 50px;
-    padding-right: 50px;
-    gap: 50px;
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px #00000040;
 }
