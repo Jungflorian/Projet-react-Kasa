@@ -1,8 +1,32 @@
 .erreur404{
-    background: url(../images/erreur404.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
+
+.erreur{
+    padding-top: 40px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+.erreur404 h1{
+    color:#FF6060;
+    font-family: "montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 150px;
+}
+
+.erreur404 p {
+    font-size: 2rem;
+    color: #FF6060;
+    font-family: "montserrat", sans-serif;
+}
+
+.erreur a{
+    color: black;
+    font-family: "montserrat", sans-serif;
+}
+

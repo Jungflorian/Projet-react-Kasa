@@ -5,7 +5,7 @@ import logo from "../Media/LOGO.png";
 function Header() {
   return (
     <header>
-      <img src={logo} alt="accueil" className="accueil" />
+      <img src={logo} alt="accueil" className="head_acceuil" />
       <nav>
         <Link to="/">Accueil</Link>
         <Link to="/Apropos">À propos</Link>
