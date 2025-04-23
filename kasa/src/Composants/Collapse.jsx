@@ -15,7 +15,6 @@ function Collapse() {
                     <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont réguliérement vérifiées par nos équipes.</p>
                 </div>
             </div>
-
             <div className="collapse__container">
                 <input type="checkbox" id="collapse2" className="collapse__checkbox" />
                 <label htmlFor="collapse2" className="collapse__container__title">
