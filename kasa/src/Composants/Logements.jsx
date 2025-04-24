@@ -1,13 +1,19 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import logements from "../logements.json";
 import "../assets/SASS/Logements.scss";
 import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import fleche from "../Media/Vector.png";
+import Page_erreur from "../Pages/Page_erreur";
 
 const Logements = () => {
   const { id } = useParams();
   const logement = logements.find((logement) => logement.id === id);
+
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+  const [isEquipementOpen, setIsEquipementOpen] = useState(false);
+
 
   return (
     <div className="logement">
@@ -28,26 +34,50 @@ const Logements = () => {
         ))}
       </div>
       <div className="bloc-collapse">
-        <input type="checkbox" id="collapse" className="collapse-checkbox" />
-        <label htmlFor="collapse" className="collapse-container-title">
-          <h1 className="description">Description</h1>
-          <img src={fleche} alt="fleche" className="fleche2"/>
-        </label>
-      <div className="collapse-content">
-        <p>{logement.description}</p>
+        <div className="collapse">
+          <div
+            className="collapse-container-title"
+            onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
+          >
+            <h1 className="description">Description</h1>
+            <img
+              src={fleche}
+              alt="fleche"
+              className={`fleche2 ${isDescriptionOpen ? "open" : ""}`}
+            />
+          </div>
+          {isDescriptionOpen && (
+            <div className="collapse-content">
+              <p>{logement.description}</p>
+            </div>
+          )}
+        </div>
+        <div className="collapse">
+          <div
+            className="collapse-container-title"
+            onClick={() => setIsEquipementOpen(!isEquipementOpen)}
+          >
+            <h1 className="equipement">Équipement</h1>
+            <img
+              src={fleche}
+              alt="fleche"
+              className={`fleche2 ${isEquipementOpen ? "open" : ""}`}
+            />
+          </div>
+          {isEquipementOpen && (
+            <div className="collapse-content">
+              <ul>
+                {logement.equipments.map((equipment, index) => (
+                  <li key={index} className="equipement-list">
+                    {equipment}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
-      </div>
-      <div className="bloc-collapse2">
-      <input type="checkbox" id="collapse" className="collapse-checkbox" />
-        <label htmlFor="collapse" className="collapse-container-title">
-          <h1 className="description">Description</h1>
-          <img src={fleche} alt="fleche" className="fleche2"/>
-        </label>
-      <div className="collapse-content">
-        <p>{logement.description}</p>
-      </div>
-      </div>
-      </div>
+    </div>
   );
 };
 

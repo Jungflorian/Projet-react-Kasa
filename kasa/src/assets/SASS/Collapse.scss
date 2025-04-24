@@ -50,18 +50,18 @@
   }
 
   .collapse__checkbox:checked + .collapse__container__title .fleche {
-      transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 
   .collapse__content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-      background-color: #f9f9f9;
-      border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: #f9f9f9;
+    border-radius: 5px;
   }
 
   .collapse__checkbox:checked ~ .collapse__content {
-      max-height: 100px;
-      padding: 10px 15px;
+    max-height: 100px;
+    padding: 10px 15px;
   }
