@@ -9,8 +9,8 @@ const App = () => {
     <Routes>
       <Route index element={<Accueil />} />
       <Route path="logement/:id" element={<Logements />} /> {}
-      <Route path="*" element={<Page_erreur />} />
       <Route path="/apropos" element={<Apropos />} />
+      <Route path="*" element={<Page_erreur />} />
     </Routes>
   );
 };

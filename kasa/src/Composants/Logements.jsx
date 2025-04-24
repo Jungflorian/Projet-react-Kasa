@@ -6,11 +6,15 @@ import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import fleche from "../Media/Vector.png";
 import Page_erreur from "../Pages/Page_erreur";
+import Erreur404 from "./Erreur404";
 
 const Logements = () => {
   const { id } = useParams();
   const logement = logements.find((logement) => logement.id === id);
 
+  if (logement==undefined){
+    return <Erreur404 />
+  }
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
   const [isEquipementOpen, setIsEquipementOpen] = useState(false);
 
