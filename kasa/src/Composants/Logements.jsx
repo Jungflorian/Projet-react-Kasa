@@ -6,6 +6,8 @@ import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import fleche from "../Media/Vector.png";
 import Page_erreur from "../Pages/Page_erreur";
+import FlecheGauche from "../Media/Vector_left.png";
+import FlecheDroite from "../Media/Vector_right.png";
 
 const Logements = () => {
   const { id } = useParams();
@@ -13,19 +15,48 @@ const Logements = () => {
 
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
   const [isEquipementOpen, setIsEquipementOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === logement.pictures.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div className="logement">
-      <div className="logement-image">
-        <img src={logement.cover} alt={logement.title} className="img-logement" />
+      <div className="carousel">
+        <img
+          src={logement.pictures[currentImageIndex]}
+          alt={`Image ${currentImageIndex + 1}`}
+          className="carousel-image"
+        />
+        {logement.pictures.length > 1 && (
+          <>
+            <button className="carousel-button prev" onClick={handlePrevImage}>
+              <img src={FlecheGauche} alt="Précédent" />
+            </button>
+            <button className="carousel-button next" onClick={handleNextImage}>
+              <img src={FlecheDroite} alt="Suivant" />
+            </button>
+          </>
+        )}
       </div>
+      <div className="logement-infos">
+        <div className="logement-infos-container">
       <h1 className="titre">{logement.title}</h1>
+      <h2 className="lieu">{logement.location}</h2>
+      </div>
       <div className="profil">
         <p className="host">{logement.host.name}</p>
         <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
       </div>
-      <h2 className="location">{logement.location}</h2>
+      </div>
       <div className="tags">
         {logement.tags.map((tag, index) => (
           <span key={index} className="tag">
@@ -34,7 +65,7 @@ const Logements = () => {
         ))}
       </div>
       <div className="bloc-collapse">
-        <div className="collapse">
+        <div className="collapse_logement">
           <div
             className="collapse-container-title"
             onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
@@ -52,7 +83,7 @@ const Logements = () => {
             </div>
           )}
         </div>
-        <div className="collapse">
+        <div className="collapse_logement">
           <div
             className="collapse-container-title"
             onClick={() => setIsEquipementOpen(!isEquipementOpen)}

@@ -20,11 +20,6 @@
     flex-direction: column;
     width: 80%;
 }
-.collapse h1{
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 10px;
-}
 
 .collapse p {
     font-family: 'Montserrat', sans-serif;
@@ -64,4 +59,22 @@
   .collapse__checkbox:checked ~ .collapse__content {
     max-height: 100px;
     padding: 10px 15px;
+  }
+
+.collapse h1 {
+    font-family: 'Montserrat', sans-serif;
+  padding-left: 10px;
+    color: white;
+  }
+
+  .collapse__content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .collapse__content li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
   }
