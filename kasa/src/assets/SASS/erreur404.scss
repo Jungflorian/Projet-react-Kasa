@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .erreur{
@@ -19,12 +21,12 @@
 }
 
 .erreur404 p {
-    font-size: 2rem;
+    font-size: 36px;
     color: #FF6060;
     font-family: "montserrat", sans-serif;
 }
 
-.erreur a{
+.erreur404  a{
     color: black;
     font-family: "montserrat", sans-serif;
 }

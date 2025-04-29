@@ -1,21 +1,11 @@
-.page-logement{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .logement{
+    padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 80px;
     padding-right: 80px;
-    gap: 25px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
-}
-
-.collapse-container-title h1{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
 }
 
 .carousel-image{
@@ -56,14 +46,6 @@
     justify-content: center;
 }
 
-.location {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    font-size: 15px;
-    font-weight: normal;
-}
-
-
 .tag{
     background-color: #FF6060;
     color: white;
@@ -87,50 +69,14 @@
 
 .profil{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 10px;
+    flex-direction: column;
 }
 
 .logement-infos{
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-}
-
-.description{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 15px;
-    padding-left: 10px;
-}
-
-.collapse-container-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FF6060;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.collapse-checkbox {
-    display: none;
-}
-
-.collapse-container {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-
-.fleche2 {
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-.fleche2.open{
-    transform: rotate(180deg);
 }
 
 .collapse-content {
@@ -138,10 +84,6 @@
     border-radius: 5px;
 }
 
-.collapse-checkbox:checked ~ .collapse-content {
-    max-height: 100px;
-    padding: 10px 15px;
-}
 
 .equipement-list{
     display: flex;
@@ -150,34 +92,40 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.equipement{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    padding-left: 10px;
-}
-
 .bloc-collapse{
     display: flex;
     flex-direction: row;
     gap: 80px;
-
-}
-
-.collapse_logement {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.collapse-content p{
- padding-left: 10px;
- font-family:'Montserrat', sans-serif;
 }
 
 .lieu{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+}
+
+.profil-infos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen { 
+    @media (max-width: 768px) {
+        .logement{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .carousel-button.next {
+            right: 20px;
+        }
+        .carousel-button.prev {
+            left: 20px;
+        }
+    
+    .bloc-collapse{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 }

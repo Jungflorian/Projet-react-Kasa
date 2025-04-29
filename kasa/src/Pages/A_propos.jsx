@@ -4,6 +4,7 @@ import "../assets/SASS/Apropos.scss";
 import Banniere from "../Composants/Banniere";
 import Banniere2 from "../Composants/Banniere2";
 import Collapse from "../Composants/Collapse";
+import APropos from "../Composants/APropos";
 
 function Apropos() {
   return (
@@ -11,7 +12,7 @@ function Apropos() {
       <Header />
       <main>
         <Banniere2/>
-        <Collapse/>
+        <APropos/>
       </main>
       <Footer />
     </div>

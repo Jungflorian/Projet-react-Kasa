@@ -4,14 +4,14 @@
     gap: 20px;
     justify-content: center;
     background-color: #F6F6F6;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 25px;
 }
 
 .card {
     position: relative; 
-    width: 30%;
+    width: 31%;
     height: 340px;
     border-radius: 10px;
 }
@@ -30,4 +30,11 @@
     font-family: Montserrat, sans-serif;
     font-size: 18px;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: 200px;
+    }
 }
