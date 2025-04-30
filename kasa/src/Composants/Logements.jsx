@@ -15,7 +15,7 @@ const Logements = () => {
   const { id } = useParams();
   const logement = logements.find((logement) => logement.id === id);
 
-  if (logement == undefined) {
+  if (logement === undefined) {
     return <Erreur404 />;
   }
 
@@ -52,40 +52,44 @@ const Logements = () => {
           </>
         )}
       </div>
-      <div className="logement-infos">
-        <div className="logement-infos-container">
-          <h1 className="titre">{logement.title}</h1>
-          <h2 className="lieu">{logement.location}</h2>
-          <div className="tags">
-        {logement.tags.map((tag, index) => (
-          <span key={index} className="tag">
-            {tag}
-          </span>
-        ))}
-      </div>
-        </div>
-        <div className="profil">
-          <div className="profil-infos">
-          <p className="host">{logement.host.name}</p>
-          <img
-            src={logement.host.picture}
-            alt={logement.host.name}
-            className="host-picture"
-          />
+
+      <div className="logement-infos-container">
+        <div className="top-line">
+          <div className="left-infos">
+            <h1 className="titre">{logement.title}</h1>
+            <h2 className="lieu">{logement.location}</h2>
+            <div className="tags">
+              {logement.tags.map((tag) => (
+                <span key={tag} className="tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
-          <div className="rating">
-          {Array.from({ length: 5 }, (_, index) => (
-            <img
-              key={index}
-              src={index < logement.rating ? Star : StarGray}
-              alt="Étoile"
-              className="star"
-            />
-          ))}
-        </div>
+
+          <div className="profil">
+            <div className="profil-infos">
+              <p className="host">{logement.host.name}</p>
+              <img
+                src={logement.host.picture}
+                alt={logement.host.name}
+                className="host-picture"
+              />
+            </div>
+            <div className="rating">
+              {Array.from({ length: 5 }, (_, index) => (
+                <img
+                  key={index}
+                  src={index < logement.rating ? Star : StarGray}
+                  alt={index < logement.rating ? "Étoile pleine" : "Étoile vide"}
+                  className="star"
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-      
+
       <div className="bloc-collapse">
         <Collapse title="Description">
           <p>{logement.description}</p>

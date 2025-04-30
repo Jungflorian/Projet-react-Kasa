@@ -1,14 +1,19 @@
-.logement{
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 80px;
-    padding-right: 80px;
+.logement {
+    padding: 20px 80px;
     gap: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.carousel-image{
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-image {
     width: 100%;
     height: 415px;
     object-fit: cover;
@@ -21,62 +26,99 @@
     background: none;
     border: none;
     cursor: pointer;
-  }
+}
 
 .carousel-button.prev {
     left: 100px;
-  }
+}
 
-  .carousel-button.next {
+.carousel-button.next {
     right: 100px;
-  }
+}
 
-.carousel{
+.logement-infos-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+}
+
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.left-infos {
+    max-width: 60%;
 }
 
 .titre {
     font-family: 'Montserrat', sans-serif;
-    color:#FF6060; 
+    color: #FF6060;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
-.tag{
+.lieu {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
     background-color: #FF6060;
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 5px 10px;
     border-radius: 15px;
-    margin-right: 10px;
 }
 
-.host{
-    color:#FF6060;
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.profil-infos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.host {
+    color: #FF6060;
     font-family: 'Montserrat', sans-serif;
+    text-align: right;
 }
 
-.host-picture{
+.host-picture {
     width: 64px;
     height: 64px;
     object-fit: cover;
     border-radius: 50px;
 }
 
-.profil{
+.rating {
+    margin-top: 10px;
     display: flex;
-    align-items: flex-end;
-    gap: 10px;
-    flex-direction: column;
+    justify-content: flex-end;
+
+    .star {
+        width: 20px;
+        margin-left: 2px;
+    }
 }
 
-.logement-infos{
+.bloc-collapse {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 80px;
 }
 
 .collapse-content {
@@ -84,48 +126,51 @@
     border-radius: 5px;
 }
 
-
-.equipement-list{
+.equipement-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.bloc-collapse{
-    display: flex;
-    flex-direction: row;
-    gap: 80px;
-}
+@media (max-width: 768px) {
+    .logement {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-.lieu{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-}
+    .carousel-button.next {
+        right: 20px;
+    }
 
-.profil-infos{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    .carousel-button.prev {
+        left: 20px;
+    }
 
-@media screen { 
-    @media (max-width: 768px) {
-        .logement{
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        .carousel-button.next {
-            right: 20px;
-        }
-        .carousel-button.prev {
-            left: 20px;
-        }
-    
-    .bloc-collapse{
-        display: flex;
+    .bloc-collapse {
         flex-direction: column;
         gap: 20px;
     }
-}
+
+    .top-line {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-infos {
+        max-width: 100%;
+    }
+
+    .profil {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profil-infos {
+        align-items: flex-end;
+    }
+
+    .rating {
+        justify-content: flex-start;
+    }
 }
