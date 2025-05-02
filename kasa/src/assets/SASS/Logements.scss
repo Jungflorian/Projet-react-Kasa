@@ -133,6 +133,20 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-indicator {
+    position: absolute;
+    bottom: 10px; 
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
 @media (max-width: 768px) {
     .logement {
         padding-left: 20px;

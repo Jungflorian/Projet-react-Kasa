@@ -16,7 +16,7 @@ nav a{
 
 nav{
     display: flex;
-    gap: 57px;
+    gap: 20px;
 }
 
 nav a:hover{
@@ -28,5 +28,8 @@ nav a:hover{
     header{
         padding-left: 10px;
         padding-right: 10px;
+    }
+    nav{
+        font-weight: bold;
     }
 }

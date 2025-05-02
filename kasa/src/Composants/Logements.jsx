@@ -49,6 +49,9 @@ const Logements = () => {
             <button className="carousel-button next" onClick={handleNextImage}>
               <img src={FlecheDroite} alt="Suivant" />
             </button>
+            <div className="carousel-indicator">
+            {currentImageIndex + 1} / {logement.pictures.length}
+          </div>
           </>
         )}
       </div>
