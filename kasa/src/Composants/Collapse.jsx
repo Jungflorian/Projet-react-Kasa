@@ -18,7 +18,15 @@ const Collapse = ({ title, children }) => {
           className={`fleche ${isOpen ? "open" : ""}`}
         />
       </div>
-      {isOpen && <div className="collapse__content">{children}</div>}
+      <div
+        className={`collapse-content ${isOpen ? "open" : ""}`}
+        style={{
+          maxHeight: isOpen ? "500px" : "0",
+          opacity: isOpen ? "1" : "0",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 };
