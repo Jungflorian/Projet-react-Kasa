@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import A_propos from "./Pages/A_propos";
 import Accueil from "./Pages/Accueil";
-import Logements from "./Pages/page_logements";
+import Logements from "./Pages/Page_logements";
 import Page_erreur from "./Pages/Page_erreur"; 
 
 const App = () => {
